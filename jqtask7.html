@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="test">
+<p class="p1">Car Details</p>
+<p>
+In real life, a car is an object. A car has properties like weight and color, and methods like start and stop. All cars have the same properties, but the property values differ from car to car.</p>
+<p class="p1">All cars have the same methods, but the methods are performed at different times.</p>
+</div>
+<div class="demo">
+<p>Food Details</p>
+<p>The seven food categories are</p>
+<p>Vegetables, Fruits, Grains, legumes, nuts and seeds, Meat and poultry, Fish and seafood, Dairy foods, Eggs</p>
+<p>Food sources from animals, birds, seafood and some plants provide protein that is the building blocks of cells</p>
+</div>
+<div class="test">
+<p class="p1">Mobile Details</p>
+<p>There are three categories of mobile phones: basic phones, feature phones, and smartphones.</p>
+<p class="p1">Smartphones are equipped with a QWERTY keypad.</p>
+</div>
+<script>
+const imgArr = ["red","green","blue","orange","violet"];
+var i=0;
+$(document).ready(function(){
+    setInterval(function(){
+        if(i==0){
+            i=5;
+        }
+        i--;
+        $(".p1").css("color", imgArr[i]);
+    },5000)
+})
+</script>
+</body>
+</html>
