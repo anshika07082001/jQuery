@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 400px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btnPrev">Previous</button>   
+    <button id="btnNext">Next</button> 
+        <div id="img1">
+            <img src="1.jpg">
+        </div>
+    <script>
+         const imgArr = ["1.jpg","2.jpg","3.jpg","download.jpeg","5.jpeg"];
+         var i=0;
+        $(document).ready(function(){
+            $("#btnPrev").click(function(){
+                if(i==0){
+                    i=5;
+                }
+                i--;
+                $("img").attr("src",imgArr[i]);
+            });
+            $("#btnNext").click(function(){
+                if(i==4){
+                    i=-1;
+                }
+                i++;
+                $("img").attr("src",imgArr[i]);
+            });
+        });
+    </script>
+</body>
+</html>
