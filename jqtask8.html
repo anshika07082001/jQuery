@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <input id="inp">    
+    <p id="suggest"></p>
+    <script>
+        const arr = ["Lily","Rose","Marigold","Lotus","Daisy", "Rosemary","Lavender"];
+        $(document).ready(function(){
+            $("input").keyup(function(){
+                $matchItem="";
+                for(i=0;i<arr.length;i++)
+                {
+                    $inputF =$("input").val();
+                    $match = arr[i].substring(0,$inputF.length);
+                    if($match == $inputF){
+                        $matchItem+=" "+arr[i];
+                    }
+                }
+                $("#suggest").html("Suggestions:"+$matchItem);
+            })
+        });
+    </script>
+</body>
+</html>
