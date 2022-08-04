@@ -17,11 +17,19 @@
         <h2>Thursday</h2>
         <h1>Friday</h1>
         <h1>Saturday</h1> 
-    </div>    
+    </div>   
+    Q3. 
+<form id="inpHide">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form> 
     <script>
         $(document).ready(function(){
             $(".divBg").children("h1").css("background-color","red");
             $("body").css("background","yellow");
+            $("#inpHide").children("input").hide();
         })
     </script>
 </body>
