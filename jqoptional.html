@@ -41,6 +41,20 @@ Q4.
 <button id="check">Check the Checkbox</button>
 <button id="uncheck">Uncheck the Checkbox</button>
 </div>
+Q6.
+<form>
+    <body>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname">
+     </body>
+     <div id='days' name ='days'>
+     <h1>Monday</h1>
+     <h2>Tuesday</h2>
+     <h3>Wednesday</h3>
+    </div>
+    </form>
     <script>
         $(document).ready(function(){
             // $(".divBg").children("h1").css("background-color","red");
@@ -49,13 +63,15 @@ Q4.
             // $("#selectOption").click(function(){
             //     $select = $(this).val();
             //     alert($select);
-            $("#check").click(function(){
-                $("#myCheckBox").prop("checked", true);
-            });
-            $("#uncheck").click(function(){
-                $("#myCheckBox").prop("checked", false);
-            })
+            // $("#check").click(function(){
+            //     $("#myCheckBox").prop("checked", true);
+            // });
+            // $("#uncheck").click(function(){
+            //     $("#myCheckBox").prop("checked", false);
             // })
+            // })
+            $appenddiv = "<h4>Thursday</h4><h5>Friday</h5><h6>Saturday</h6>";
+            $("#days").append($appenddiv)
         })
     </script>
 </body>
