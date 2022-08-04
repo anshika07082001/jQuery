@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="divBg">
+        <h1>Monday</h1>
+        <h2>Tuesday</h2>
+        <h3>Wednesday</h3>
+    </div>
+    <div class="divBg">
+        <h2>Thursday</h2>
+        <h1>Friday</h1>
+        <h1>Saturday</h1> 
+    </div>    
+    <script>
+        $(document).ready(function(){
+            $(".divBg").children("h1").css("background-color","red");
+            // $("body").css("background","yellow");
+        })
+    </script>
+</body>
+</html>
