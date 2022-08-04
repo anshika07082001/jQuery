@@ -34,15 +34,28 @@ Q4.
     <option>pear</option>
     <option>grapes</option>
 </select>
+
+<div>
+    Q5.
+<input type="checkbox" id="myCheckBox">
+<button id="check">Check the Checkbox</button>
+<button id="uncheck">Uncheck the Checkbox</button>
+</div>
     <script>
         $(document).ready(function(){
-            $(".divBg").children("h1").css("background-color","red");
-            $("body").css("background","yellow");
-            $("#inpHide").children("input").hide();
-            $("#selectOption").click(function(){
-                $select = $(this).val();
-                alert($select);
+            // $(".divBg").children("h1").css("background-color","red");
+            // $("body").css("background","yellow");
+            // $("#inpHide").children("input").hide();
+            // $("#selectOption").click(function(){
+            //     $select = $(this).val();
+            //     alert($select);
+            $("#check").click(function(){
+                $("#myCheckBox").prop("checked", true);
+            });
+            $("#uncheck").click(function(){
+                $("#myCheckBox").prop("checked", false);
             })
+            // })
         })
     </script>
 </body>
