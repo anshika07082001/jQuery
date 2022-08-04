@@ -25,11 +25,24 @@
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname">
 </form> 
+Q4.
+<select id="selectOption">
+    <option>mango</option>
+    <option>pineapple</option>
+    <option>orange</option>
+    <option>banana</option>
+    <option>pear</option>
+    <option>grapes</option>
+</select>
     <script>
         $(document).ready(function(){
             $(".divBg").children("h1").css("background-color","red");
             $("body").css("background","yellow");
             $("#inpHide").children("input").hide();
+            $("#selectOption").click(function(){
+                $select = $(this).val();
+                alert($select);
+            })
         })
     </script>
 </body>
