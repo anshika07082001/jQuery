@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>Write a jQuery Code to get any single element from a ul</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<ul id="listItem">
+  <li>Html Tutorial</li>
+  <li>Mongodb Tutorial</li>
+  <li>Python Tutorial</li>
+</ul>
+<div></div>
+<script>
+    $(document).ready(function(){
+      $li = $("li");
+      $index = $li.html();
+      $("div").html($index);
+    })
+</script>
+</body>
+</html>
