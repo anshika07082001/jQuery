@@ -43,6 +43,13 @@ $(document).ready(function(){
             }
         }
         filterPopulateOp($opArr);
+        if($("#tblShow").children().length==1)
+        {
+         $("#tblShow").hide();
+        }
+        else{
+         $("#tblShow").show();
+        }
     })
 
     // Filter By Brand
@@ -56,6 +63,13 @@ $(document).ready(function(){
             }
         }
         filterPopulateOp($brandArr);
+        if($("#tblShow").children().length==1)
+        {
+         $("#tblShow").hide();
+        }
+        else{
+         $("#tblShow").show();
+        }
     })
     
     //Filter populate function table
@@ -73,6 +87,7 @@ $(document).ready(function(){
     // search by id and name
 
     $("#divSearch").on("click","#btnSearch",function(){
+        $("#searchTable").html("");
         $inp = $("#inpText").val().toLowerCase();
         $sel = $("#searchSelect :selected").text();
         $text = "<tr><th>ID</th><th>Name</th><th>Brand</th><th>Operating System</th></tr>";
@@ -90,5 +105,6 @@ $(document).ready(function(){
                 }
             }
         }
+        
     })
 })
