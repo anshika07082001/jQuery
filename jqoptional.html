@@ -64,9 +64,15 @@ Q6.
      serunt? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur temporibus, necessitatibus, earum beatae excepturi nostrum alias voluptatibus
      aliquam omnis accusantium ipsum fugit unde dolores nam inventore obcaecati rerum eaque animi?</p>
 </div> -->
-<h1>Q 14.</h1>
+<!-- <h1>Q 14.</h1>
     <button id="btnOnOff">On/Off Animation</button>
-    <div id="animate" style="background-color: green; height: 100px; width: 20%;"></div>
+    <div id="animate" style="background-color: green; height: 100px; width: 20%;"></div> -->
+<h1>Q8.</h1>
+    <ul>
+        <li>Html Tutorial</li>
+        <li>Mongodb Tutorial</li>
+        <li>Python Tutorial</li>
+      </ul>
 
     <script>
         $(document).ready(function(){
@@ -88,9 +94,12 @@ Q6.
             // $("#days").animate({height: "100px"},5000);
             // $("#divP").animate({opacity:'0.5'},500)
             // $("p").hide(5000)
-            $("#btnOnOff").click(function(){
-                $("#animate").toggle(2000);
-            })
+            // $("#btnOnOff").click(function(){
+            //     $("#animate").toggle(2000);
+            // })
+            $("li").each(function(index,element){
+                $(element).prepend(index+" ");
+            });
         })
     </script>
 </body>
