@@ -55,7 +55,7 @@ Q6.
      <h3>Wednesday</h3>
     </div> -->
 
-<h1>Q 13.</h1>
+<!-- <h1>Q 13.</h1>
 <div id="divP">
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia officiis, dolorum rem voluptatum eveniet nemo in, possimus
      quidem suscipit expedita, accusantium impedit repellat quisquam distinctio! Quas maxime quos 
@@ -63,7 +63,11 @@ Q6.
      uasi praesentium veniam nobis laudantium laboriosam enim, quidem aut suscipit earum similique, ea fuga soluta ducimus quam de
      serunt? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur temporibus, necessitatibus, earum beatae excepturi nostrum alias voluptatibus
      aliquam omnis accusantium ipsum fugit unde dolores nam inventore obcaecati rerum eaque animi?</p>
-</div>
+</div> -->
+<h1>Q 14.</h1>
+    <button id="btnOnOff">On/Off Animation</button>
+    <div id="animate" style="background-color: green; height: 100px; width: 20%;"></div>
+
     <script>
         $(document).ready(function(){
             // $(".divBg").children("h1").css("background-color","red");
@@ -83,7 +87,10 @@ Q6.
             // $("#days").append($appenddiv)
             // $("#days").animate({height: "100px"},5000);
             // $("#divP").animate({opacity:'0.5'},500)
-            $("p").hide(5000)
+            // $("p").hide(5000)
+            $("#btnOnOff").click(function(){
+                $("#animate").toggle(2000);
+            })
         })
     </script>
 </body>
