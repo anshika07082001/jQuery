@@ -5,9 +5,7 @@ $(document).ready(function(){
     {"id": "103","name": "Samsung Galaxy S","brand": "Samsung","os": "Android","remove":""},
     {"id": "104","name": "Google Nexus","brand": "ASUS","os": "Android","remove":""},
     {"id": "105","name": "Surface","brand": "Microsoft","os": "Windows","remove":""}];
-
     // table populate function
-
     function populate(){
         $text = "";
         $text = "<tr><th>ID</th><th>Name</th><th>Brand</th><th>Operating System</th><th>Remove</th></tr>";
@@ -17,9 +15,7 @@ $(document).ready(function(){
         $("#tblShow").html($text);
     }
     populate();
-    
     // removes row //
-    
     $("table").on("click","a",function(){
         $(this).closest("tr").remove();  
         if($("#tblShow").children().length==1)
@@ -30,9 +26,7 @@ $(document).ready(function(){
          $("#tblShow").show();
         }
     })
-
     // Filter By Operating System
-
     $("#selectFilterOp").change(function(){
         $("#tblShow").html("");
         $opArr = [];
@@ -51,9 +45,7 @@ $(document).ready(function(){
          $("#tblShow").show();
         }
     })
-
     // Filter By Brand
-
     $("#selectFilterBrand").change(function(){
         $brandArr = [];
         $sel = $("#selectFilterBrand :selected").text();
@@ -71,9 +63,7 @@ $(document).ready(function(){
          $("#tblShow").show();
         }
     })
-    
     //Filter populate function table
-
     function filterPopulateOp($args1){
         $("#tblShow").html("");
         $text = "";
@@ -83,28 +73,21 @@ $(document).ready(function(){
         }
         $("#tblShow").html($text);
     }
-
     // search by id and name
-
     $("#divSearch").on("click","#btnSearch",function(){
         $("#searchTable").html("");
         $inp = $("#inpText").val().toLowerCase();
-        $sel = $("#searchSelect :selected").text();
         $text = "<tr><th>ID</th><th>Name</th><th>Brand</th><th>Operating System</th></tr>";
         for(i=0;i<products.length;i++){
-            if($sel == "name"){
-                if($inp == products[i].name.toLowerCase()){
-                    $text += "<tr><td>"+products[i].id+"</td><td>"+products[i].name+"</td><td>"+products[i].brand+"</td><td>"+products[i].os+"</td></tr>";
-                    $("#searchTable").html($text);
-                }
+            if($inp == products[i].name.toLowerCase()){
+                $text += "<tr><td>"+products[i].id+"</td><td>"+products[i].name+"</td><td>"+products[i].brand+"</td><td>"+products[i].os+"</td></tr>";
+                $("#searchTable").html($text);
             }
-            if($sel == "id"){
                 if($inp == products[i].id){
-                    $text += "<tr><td>"+products[i].id+"</td><td>"+products[i].name+"</td><td>"+products[i].brand+"</td><td>"+products[i].os+"</td></tr>";
-                    $("#searchTable").html($text);
-                }
+                $text += "<tr><td>"+products[i].id+"</td><td>"+products[i].name+"</td><td>"+products[i].brand+"</td><td>"+products[i].os+"</td></tr>";
+                $("#searchTable").html($text);
             }
         }
-        
+        $("#inpText").val("");
     })
 })
