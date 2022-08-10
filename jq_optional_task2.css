@@ -1,0 +1,97 @@
+#container{
+    height: 700px;
+    width: 100%;
+    font-size: 1.8rem;
+}
+#header{
+    height: 10%;
+    width: auto;
+}
+#divMouse{
+    height: 30%;
+    width: 98%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1%;
+    box-shadow: 1px 1px 2px 2px rgb(189, 184, 184);
+}
+#imgMouse{
+    width: 18%;
+    height: 100%;
+    display: flex;
+}
+#contentMouse{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#mouseHead{
+    height: 20%;
+    width: 96%;
+    margin-left: 2%;
+    color: rgb(61, 207, 159);
+}
+#mousePara{
+    height: 40%;
+    width: 96%;
+    font-size: 1.2rem;
+    margin-left:2%;
+}
+#mouseBtn{
+    height: 25%;
+    width: 96%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 2%;
+    border-top: 1px ridge rgb(207, 201, 201);
+    justify-content: space-between;
+}
+#imgMouse img{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+button, input{
+    border: none;
+}
+button{
+    width: 8%;
+    font-size: 1.8rem;
+    background-color: whitesmoke;
+}
+input{
+    width: 30%;
+    font-size: 1.8rem;
+    text-align: center;
+}
+#btnLeft,#btnRight{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+#footer{
+    height: 200px;
+    align-items: center;
+    margin-top: 5%;
+}
+#totalDiv{
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+#divLeft,#divRight{
+    height: 90%;
+    width: 30%;
+    margin: 1%;
+}
+.c{
+    height: 25%;
+    width: 25%;
+    font-size: 1.5rem;
+}
+#d{
+    background-color: rgb(61, 207, 159);
+    width: 100%;
+    text-align: center;
+}
