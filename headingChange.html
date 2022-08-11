@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id{
+            color:blue;
+            font-size: 2rem;
+            margin: auto;
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1 id="1h" name="name">Heading 1</h1>
+        <h1 class="bingo" id="2h" name="n2">Heading 1</h1>
+        <h1 id="id" name="id">Heading 1</h1>
+        <h1>Heading 1</h1>
+        <h1>Heading 1</h1>
+        <button id="btn">Copy Attributes</button>
+    </div>
+    <div id="display"></div>
+    <script>
+        $(document).ready(function(){
+            $arr=[];
+            // copying attributes of every tag
+            $("#btn").click(function(){
+                $getAttributes();});
+                function $getAttributes(){
+                   
+                    $("h1").each(function(j,args){
+                    console.log("args:",args);
+                    $.each(args.attributes,function(i,a){
+                        
+                        $obj={name:a.name, value:a.value};
+                        $arr.push($obj);
+                    })
+                })
+                $("#display").append("<h3>"+$arr.length+"attributes</h3>")
+                for(i=0;i<$arr.length;i++){
+                    $("#display").append("<p>"+$arr[i].name+". "+$arr[i].value+"</p>");
+                }
+            }
+            // $("h1:not(.bingo)").replaceWith('<h2>' + $("h1").html() + '</h2>');
+        })
+    
+    </script>
+</body>
+</html>
