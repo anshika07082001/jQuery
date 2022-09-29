@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="jq_optional_task3.css" />
+    <script
+      src="https://kit.fontawesome.com/09a9748e67.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Set 3</title>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="divItems">
+        <h1>Add Items</h1>
+        <table id="tabItems">
+          <tr>
+            <th>#Item</th>
+            <th>Qty</th>
+            <th>MRP</th>
+            <th>TAX</th>
+            <th>Total</th>
+            <th>Operations</th>
+          </tr>
+          <tr>
+            <td>
+              <select class="selProducts">
+                <option>--Select Product--</option>
+                <option>101 name1</option>
+                <option>102 name2</option>
+                <option>103 name3</option>
+                <option>104 name4</option>
+                <option>105 name5</option>
+              </select>
+            </td>
+            <td><input type="text" class="inpQuantity" disabled/></td>
+            <td><input type="text" class="inpMRP" disabled/></td>
+            <td>
+              <select id="selTax" disabled>
+                <option>0%</option>
+                <option>5%</option>
+                <option>12%</option>
+                <option>18%</option>
+                <option>28%</option>
+              </select>
+            </td>
+            <td><input type="text" class="inpTotal" id="total1" disabled /></td>
+            <td>
+              <button id="btnAdd" disabled><i class="fa-solid fa-plus"></i></button
+              ><button id="btnRemove" disabled>
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="divAmount">
+        <div class="rows" id="first">
+          <div id="first-left">
+            <label>Invoice Amount</label>
+            <input type="number" class="inpInvoice" id="inpAmount" disabled />
+          </div>
+          <div id="first-right">
+            <label>Sales/Purchase Amount @ 0%</label>
+            <input type="number" class="inpInvoice" id="inp0" disabled />
+          </div>
+        </div>
+        <div class="rows" id="second">
+          <div id="second-left">
+            <label>Sales/Purchase Amount @ 5%</label>
+            <input type="number" class="inpInvoice" id="inp5" disabled />
+          </div>
+          <div id="second-right">
+            <label>Sales/Purchase Amount @ 12%</label>
+            <input type="number" class="inpInvoice" id="inp12" disabled />
+          </div>
+        </div>
+        <div class="rows" id="third">
+          <div id="third-left">
+            <label>Sales/Purchase Amount @ 18%</label>
+            <input type="number" class="inpInvoice" id="inp18" disabled />
+          </div>
+          <div id="third-right">
+            <label>Sales/Purchase Amount @ 28%</label>
+            <input type="number" class="inpInvoice" id="inp28" disabled />
+          </div>
+        </div>
+        <div id="btn"><button id="btnSave">Save</button></div>
+      </div>
+    </div>
+    <div id="bill"></div>
+    <script src="jq_optional_task3.js"></script>
+  </body>
+</html>
