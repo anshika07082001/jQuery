@@ -1,133 +1,188 @@
-body{
-    margin: 0;
-    padding: 1% 0%;
-}
-#parent{
-    height: 700px;
-    display: flex;
-    width: 97%;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 4px solid gainsboro;
-    padding: 1%;
-    border-radius: 5px;
-}
-input, select{
-    border-radius: 5px;
-}
-h1{
-    margin-top: 0;
-}
-#divItems{
-    height: 49%;
-}
-#tabItems{
-    width: 100%;
-    height: 80%;
-}
-tbody{
-    width: 100%;
-}
-table,tr,td,th{
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
- }
- td{
-    width: 15%;
- }
- .selProducts,#selTax{
-    width: 80%;
-    height: 40%;
- }
- td input{
-    width: 90%;
-    height: 35%;
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
- }
- td button{
-    width: 35%;
-    height: 35%;
-    margin: 0% 1%;
-    border-radius: 5px;
- }
- th{
-    font-size: 25px;
-    padding: 0;
- }
- #btnAdd{
-    background-color: #1f89e3;
-    color: white;
-    font-size: 25px;
-    padding: 0;
+* {
 
- }
- #btnRemove{
-    background-color: red;
-    color: white;
-    padding: 0;
-    font-size: 25px;
- }
- #divAmount{
-    height: 49%;
- }
- .rows{
-    display: flex;
-    justify-content: space-between;
-    height: 30%;
- }
- .rows div{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
- }
- .rows div input{
-    width: 90%;
-    height: 40%;
- }
- .rows div label{
-    height: 40%;
-    font-size: 23px;
-    font-weight: 600;
- }
- #btnSave{
-    height: 40px;
-    width: 5%;
-    border-radius: 5px;
-    background-color: #1f3f7a;
-    color: white;
-    font-size: 17px;
- }
-#bill{
-   visibility: hidden;
-   display: flex;
-   flex-flow: column;
-   width: 60%;
-   margin: 2% auto;
-   padding: 2% ;
-   border: 5px solid black;
-   border-style: dashed;
+   margin: 0px;
+   padding: 0px;
 }
-#bill h1{
+
+body {
+   width: 100vw;
+   font-family: 'Allerta';
+   font-size: 22px;
+}
+
+.container {
+   width: 96%;
+   margin: 1%;
+   padding: 1%;
+   border: 1px solid rgb(194, 194, 194);
+}
+.innovice h1,h2,h3,h4,h5,h6{
+   margin: 0;
+   padding: 0;
+}
+.innovice
+{
+   width: 100% !important;
+}
+.innovice .container
+{
+   width: 1000px !important;
+   height: 940px !important;
+}
+.innovice p{
+   margin: 0;
+   padding: 0;
+}
+.innovice .container{
+   width: 80%;
+   margin-right: auto;
+   margin-left: auto;
+}
+.innovice .brand-section{
+  background-color:  rgb(0, 179, 179);;
+  padding: 10px 40px;
+}
+.innovice .logo{
+   width: 50%;
+}
+
+.innovice .row{
+   display: flex;
+   flex-wrap: wrap;
+}
+.innovice .col-6{
+   width: 50%;
+   flex: 0 0 auto;
+}
+.innovice .text-white{
+   color: #fff;
+}
+.innovice .company-details{
+   float: right;
+   text-align: right;
+}
+.innovice .body-section{
+   padding: 16px;
+    border: 5px dashed black;
+}
+.innovice .heading{
+   font-size: 20px;
+   margin-bottom: 08px;
+}
+.innovice .sub-heading{
+   color: #262626;
+   margin-bottom: 05px;
+}
+.innovice table{
+   width: 100%;
+   border-collapse: collapse;
+}
+.innovice table thead tr{
+   border: 1px solid  rgb(0, 179, 179);;
+}
+.innovice table td {
+   vertical-align: middle !important;
    text-align: center;
 }
-#bill div{
+.innovice table th,.innovice table td {
+   padding-top: 08px;
+   padding-bottom: 08px;
+}
+.innovice .table-bordered td,.innovice .table-bordered th {
+   border: 1px solid #dee2e6;
+}
+.innovice .text-right{
+   text-align: end;
+}
+.innovice .w-20{
+   width: 20%;
+}
+.innovice .float-right{
+   float: right;
+}
+#tabley{
+   width: 96%;
+   margin: 2%;
+   margin-top: 1%;
+}
+
+#tabley th {
+   font-size: 23px;
+   text-align: left;
+}
+
+#tabley input,select {
+   height: 38px;
+   border-radius: 5px;
+   border: 1px solid rgb(194, 194, 194);
+   padding: 5px;
+   font-size: 20px;
+   background-color: white;
+   width: 96%;
+}
+
+
+#tabley .add {
+   background-color: rgb(41, 194, 255);
+   border: none;
+   color: white;
+   border-radius: 5px;
+   font-weight: 900;
+   padding: 5px;
+   width: 50%;
+   font-size: 30px;
+}
+
+#tabley .del {
+   background-color: rgb(255, 41, 41);
+   border: none;
+   color: white;
+   border-radius: 5px;
+   padding: 5px;
+   width: 50%;
+   font-size: 30px;
+}
+#tablex
+{
+   width: 100%;
+
+} 
+#tablex tr{
+   width: 100%;
+}
+
+#tablex td{
+   width: 50%;
+   padding: 1%;
+}
+#tablex input
+{
+   width: 95%;
+   height: 40px;
+   border-radius: 5px;
+   border: 1px solid rgb(194, 194, 194);
+   margin-top: 1%;
    font-size: 25px;
-   display: flex;
-   justify-content: space-between;
+   padding: 5px;
+}
+#save{
+   padding: 15px;
+   font-size: 22px;
+   background-color: rgb(0, 179, 179);
+   color: white;
+   border-radius: 5px;
+   border:none
+}
+
+select{
+   width: 98%;
+   height: 50px;
 
 }
-#bill p{
-   font-size: 25px;
+#tablex input{
+   padding-left: 10px;
 }
-hr{
-   width: 100%;
-   height: 2px;
-   background-color: black;
-}
-#GrandTotal{
-   justify-content: end;
+.hidder
+{
+   display: none;
 }
