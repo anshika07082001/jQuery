@@ -1,0 +1,100 @@
+body {
+    background-color: #bcc8d1;
+    font-size:35px;
+    color:white;
+    font-weight: 500;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body > p {
+    font-size:16px;
+  }
+  .desc {
+    width:25%;
+    margin:auto;
+    font-size:14px;
+  }
+  .clock {
+    top:30%;
+    background-color: #3c434c;
+    width:350px;
+    height:150px;
+    margin:auto;
+    padding:30px;
+  }
+  .clock div{
+    display:inline-block;
+    background-color: #202731;
+    width:25%;
+    height: 100%;
+    text-align: center;
+  }
+  #date{
+    height: 100px;
+    width: 70%;
+    background-color: grey;
+    text-align: center;
+    margin: auto;
+  }
+
+
+
+
+
+
+
+  h1{
+    margin-left: 35%;
+}
+#container{
+    height: 250px;
+    width: 40%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 4%;
+    border-radius: 10px;
+    border: 4px solid rgb(137, 134, 137);
+}
+#upperDiv{
+    height: 40%;
+    width: 80%;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0px rgb(137, 134, 137);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#lowerDiv{
+    height: 30%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+}
+#lowerDiv button{
+    height: 80%;
+    width: 30%;
+    border: none;
+    color: white;
+    background-color: grey;
+    box-shadow: 5px 5px 5px 0px rgb(137, 134, 137);
+    margin: 2%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+button:hover{
+    cursor: pointer;
+}
+span{
+    font-size: 2.5rem;
+}
