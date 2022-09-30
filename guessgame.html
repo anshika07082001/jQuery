@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess  the word</title>
+    <style>
+        body{
+            font-weight: 600;
+        }
+        #container{
+            background-color: rgb(199, 233, 247);
+            height: 650px;
+            margin: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid skyblue;
+            border-radius: 10px ;
+            justify-content: center;
+            align-items: center;
+        }
+        #container img{
+            height: 20%;
+            width: 70%;
+        }
+        input{
+            height: 10%;
+            width: 5%;
+            margin: 1%;
+            font-size: 1.5rem;
+        }
+        button{
+            height: 8%;
+            width: 20%;
+            border-radius: 5px;
+            background-color: skyblue;
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+        span{
+            margin: 1%;
+        }
+        h1{
+            margin: 1%;
+        }
+        #guess{
+            height: 10%;
+            width: 30%;
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="https://store-images.s-microsoft.com/image/apps.24805.13510798887480084.80c2ddbb-fe8e-4223-a8b6-dc3df813cbf3.372195fc-a7b9-4b95-b8db-5d55d8085e26?mode=scale&q=90&h=1080&w=1920" alt="">
+        <span id="guessResult"></span>
+        <div id="guess">
+            <h3 id="0"><bold>*</bold></h3>
+            <h3 id="1"><bold>*</bold></h3>
+            <h3 id="2"><bold>*</bold></h3>
+            <h3 id="3"><bold>*</bold></h3>
+            <h3 id="4"><bold>*</bold></h3>
+            <h3 id="5"><bold>*</bold></h3>
+        </div>
+        <span id="comment">You have 6 guesses remaining</span>
+        <h1 id="guessLetter"></h1>
+        <span>Type one letter</span>
+        <input type="text" id="inp" maxlength="1">
+        <button onclick="clickHandler()">Guess</button>
+        <span id="ansComment" style="color: red;"></span>
+    </div>
+    <script>
+        let word='LENGTH';
+        let len =parseInt(word.length);
+        function clickHandler(){
+            len--;
+            var guessLetter = document.getElementById('inp').value.toUpperCase();
+            document.getElementById('comment').innerHTML="You have"+len+ "guesses remaining";
+            document.getElementById('guessLetter').innerHTML+="  "+guessLetter+"  ";
+            if(len>=0){
+                let flag=0;
+                let char='';
+                for(i=0;i<word.length;i++){
+                    if(guessLetter==word.charAt(i)){
+                        document.getElementById(i).innerHTML=word.charAt(i)
+                        flag=1;
+                    }
+                }
+                if(flag==1){
+                    document.getElementById('guessResult').innerHTML="Good guess! the word has letter"+guessLetter;
+                }
+                else{
+                    document.getElementById('guessResult').innerHTML="Wrong guess! the word does not has the letter" + guessLetter;
+                }
+                winner();
+            }
+            else{
+                document.getElementById('ansComment').innerHTML="Game Over! You have exceed guess limit";
+                document.getElementById('comment').innerHTML="You have 0 guess remaining";
+            }
+        }
+        function winner(){
+            let count=0;
+            for(i=0;i<word.length;i++){
+                char = document.getElementById(i).innerHTML;
+                if(char ==word.charAt(i)){
+                    count++;
+                }
+            }
+            if(count==6){
+                document.getElementById('ansComment').innerHTML="Congratulation You have won the game";
+            }
+        }
+    </script>
+</body>
+</html>
